@@ -1,6 +1,6 @@
 import React from 'react';
 import { Footer, Header } from '../Components/Layout/Index';
-import { AccessDenied, AuthenticationTest, AuthenticationTestAdmin, Booking, CarItemDetails, Home, Login, NotFound, Register } from '../Pages';
+import { AccessDenied, AuthenticationTest, AuthenticationTestAdmin, Booking, CarItemDetails, Home, Login, NotFound,  Payment,  Register } from '../Pages';
 import {Routes,Route} from "react-router-dom";
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,7 +22,7 @@ function App() {
     }
   }, []);
 
-  const userData: userModel = useSelector(
+  const userData = useSelector(
     (state: RootState) => state.userAuthStore
   );
 
@@ -50,6 +50,7 @@ function App() {
           <Route path="/authentication" element={<AuthenticationTest />}></Route>
           <Route path="/authorization" element={<AuthenticationTestAdmin />}></Route>
           <Route path="/accessDenied" element={<AccessDenied />} />
+          <Route path="/payment" element={<Payment />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>

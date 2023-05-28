@@ -10,12 +10,12 @@ const bookingApi = createApi({
     
     getBooking: builder.query({
       query: (userId) => ({
-        url: `BookingController`,
+        url:`BookingController`,
         params:{
           userId:userId
         }
       }),
-      providesTags: ["BookingController"],
+      providesTags:["BookingController"],
     }),
     updateBooking :builder.mutation({
       query:({carListId,userId,removeCar})=>({

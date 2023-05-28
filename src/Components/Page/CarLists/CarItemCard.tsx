@@ -19,7 +19,7 @@ function CarItemCard(props:Props) {
     const navigate = useNavigate();
     const [isAddingToBook,setIsAddingToBook]=useState<boolean>(false);
     const [updateBooking] =useUpdateBookingMutation();
-    const userData: userModel = useSelector(
+    const userData = useSelector(
       (state: RootState) => state.userAuthStore
     );
 

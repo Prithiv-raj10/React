@@ -7,4 +7,5 @@ import Login from "./Login";
 import AccessDenied from "./AccessDenied";
 import AuthenticationTest from "./AuthenticationTest";
 import AuthenticationTestAdmin from "./AuthenticationTestAdmin";
-export {Register,Login,Home,NotFound,CarItemDetails,Booking,AccessDenied,AuthenticationTest,AuthenticationTestAdmin};
+import Payment from "./Payment";
+export {Register,Login,Home,NotFound,CarItemDetails,Booking,AccessDenied,AuthenticationTest,AuthenticationTestAdmin,Payment};

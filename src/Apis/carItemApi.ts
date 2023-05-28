@@ -9,13 +9,13 @@ const carItemApi = createApi({
   endpoints: (builder) => ({
     getCarItems: builder.query({
       query: () => ({
-        url: "CarList",
+        url:"CarList",
       }),
       providesTags: ["CarList"],
     }),
     getCarItemById: builder.query({
-      query: (id) => ({
-        url: `CarList/${id}`,
+      query:(id) => ({
+        url:`CarList/${id}`,
       }),
       providesTags: ["CarList"],
     }),

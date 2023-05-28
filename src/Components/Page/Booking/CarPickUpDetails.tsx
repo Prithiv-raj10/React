@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
-import { rentItemModel } from '../../../Interfaces'
+import { apiResponse, rentItemModel } from '../../../Interfaces'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../../Storage/Redux/store'
 import { inputHelper } from '../../../Helper'
 import { MiniLoader } from '../Common'
+import { useNavigate } from 'react-router-dom'
+import { useInitiatePaymentMutation } from '../../../Apis/paymentApi'
 
 
 function CarPickUpDetails() {
@@ -11,14 +13,17 @@ function CarPickUpDetails() {
     const bookingFromStore: rentItemModel[] =useSelector(
         (state: RootState) => state.bookingStore.rentItems?? []
     )
+    const userData=useSelector((state:RootState) => state.userAuthStore);
     let total=bookingFromStore.map((item)=>(item.carList?.rent));
     const initialUserData={
-        name:"",
-        email:"",
+        name:userData.fullName,
+        email:userData.email,
         phoneNumber:"",
     };
-
-    const[userInput,setUserInput]=useState(initialUserData);
+  
+    const navigate=useNavigate();
+    const [userInput,setUserInput]=useState(initialUserData);
+    const [initiatePayment]=useInitiatePaymentMutation();
     const handleUserInput=(e:React.ChangeEvent<HTMLInputElement>)=>{
         const tempData =inputHelper(e,userInput);
         setUserInput(tempData);
@@ -27,6 +32,12 @@ function CarPickUpDetails() {
     const handleSubmit =async(e:React.FormEvent<HTMLFormElement>) =>{
         e.preventDefault();
         setLoading(true);
+
+        
+    const { data }: apiResponse = await initiatePayment(userData.id);
+    navigate("/payment", {
+      state: { apiResult: data?.result, userInput },
+    });
     };
   return (
     <div className="border pb-5 pt-3">

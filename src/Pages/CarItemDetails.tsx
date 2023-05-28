@@ -33,8 +33,8 @@ const handleAddToBook = async (carItemId:number) =>{
   }
   setIsAddingToBook(true);
   const response :apiResponse=await updateBooking({
-    carListId: carItemId,
-    userId: userData.id,
+    carListId:carItemId,
+    userId:userData.id,
 
   });
 
@@ -46,8 +46,8 @@ const handleAddToBook = async (carItemId:number) =>{
 
   setIsAddingToBook(false);
 }
+console.log(data);
   return (
-    
     <div className="container pt-4 pt-md-5">
 
   {!isLoading? (

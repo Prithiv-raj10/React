@@ -14,5 +14,5 @@ export const carItemSlice = createSlice({
   },
 });
 
-export const { setCarItem} = carItemSlice.actions;
+export const {setCarItem} = carItemSlice.actions;
 export const carItemReducer = carItemSlice.reducer;

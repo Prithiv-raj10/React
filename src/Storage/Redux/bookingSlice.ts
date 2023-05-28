@@ -24,5 +24,5 @@ export const bookingSlice = createSlice({
   },
 });
 
-export const { setBooking,removeFromBooking} = bookingSlice.actions;
+export const {setBooking,removeFromBooking} = bookingSlice.actions;
 export const bookingReducer = bookingSlice.reducer;

@@ -9,13 +9,14 @@ import { useUpdateBookingMutation } from '../../../Apis/bookingApi';
 function BookingSummary() {
   const dispatch =useDispatch();
   const [updateBooking]=useUpdateBookingMutation();
-  const userData: userModel = useSelector(
-    (state: RootState) => state.userAuthStore
-  );
+ 
     const bookingFromStore: rentItemModel[] =useSelector(
         (state: RootState) => state.bookingStore.rentItems?? []
     )
         console.log(bookingFromStore);
+        const userData: userModel = useSelector(
+          (state: RootState) => state.userAuthStore
+        );
 
     if(!bookingFromStore)
     {
