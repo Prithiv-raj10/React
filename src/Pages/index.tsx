@@ -8,4 +8,5 @@ import AccessDenied from "./AccessDenied";
 import AuthenticationTest from "./AuthenticationTest";
 import AuthenticationTestAdmin from "./AuthenticationTestAdmin";
 import Payment from "./Payment";
-export {Register,Login,Home,NotFound,CarItemDetails,Booking,AccessDenied,AuthenticationTest,AuthenticationTestAdmin,Payment};
+import OrderConfirmed from "./Order/OrderConfirmed";
+export {Register,Login,Home,NotFound,CarItemDetails,Booking,AccessDenied,AuthenticationTest,AuthenticationTestAdmin,Payment,OrderConfirmed};

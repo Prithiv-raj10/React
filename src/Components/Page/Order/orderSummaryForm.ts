@@ -1,4 +1,5 @@
 import { bookingModel } from "../../../Interfaces";
+import { SD_Status } from "../../../Utility/SD";
 
 export interface orderSummaryProps {
     data: {

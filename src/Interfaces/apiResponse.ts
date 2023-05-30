@@ -5,7 +5,7 @@ export default interface apiResponse {
       message?: string;
       result: {
         // this will not give suggestions
-        [key: string]: string;
+        [key: string]: any;
       };
     };
     error?: any;

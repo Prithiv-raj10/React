@@ -3,4 +3,6 @@ import rentItemModel from "./rentItemModel";
 import bookingModel from "./bookingModel";
 import userModel from "./userModel";
 import apiResponse from "./apiResponse";
-export type {carListModel,bookingModel,rentItemModel,userModel,apiResponse};
+import orderDetailModel from "./orderDetailModel";
+import orderHeaderModel from "./orderHeaderModel";
+export type {carListModel,bookingModel,rentItemModel,userModel,apiResponse,orderDetailModel,orderHeaderModel};

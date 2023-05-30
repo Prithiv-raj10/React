@@ -1,8 +1,12 @@
 import React from 'react'
-import { orderSummaryProps } from './orderSummaryForm'
+import getStatusColor from '../../../Helper/getHelperColor';
+import OrderListProps from './orderListType';
+import { orderSummaryProps } from './orderSummaryForm';
 
 function OrderSummary({data,userInput}:orderSummaryProps) {
-    console.log(data);
+
+  // const badgeTypeColor = getStatusColor(data.value.result!);
+    // console.log(orderData);
     // console.log(data.value.result.clientSecret);
     // console.log(data.result.clientSecret);
     const name=data.value.result.rentItems[0].carList.name;
@@ -10,7 +14,12 @@ function OrderSummary({data,userInput}:orderSummaryProps) {
   return (
     <div>
       {" "}
-      <h3 className="text-success">Order Summary</h3>
+      {/* <div className="d-flex justify-content-between align-items-center"> */}
+            <h3 className="text-success">Order Summary</h3>
+            {/* <span className={`btn btn-outline-${badgeTypeColor} fs-6`}> */}
+              {/* {data.value.result} */}
+            {/* </span>
+          </div> */}
       <div className="mt-3">
         <div className="border py-3 px-2">Name : {userInput.name}</div>
         <div className="border py-3 px-2">Email : {userInput.email} </div>
