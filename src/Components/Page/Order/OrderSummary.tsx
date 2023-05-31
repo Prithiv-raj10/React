@@ -1,14 +1,18 @@
 import React from 'react'
 import getStatusColor from '../../../Helper/getHelperColor';
 import OrderListProps from './orderListType';
-import { orderSummaryProps } from './orderSummaryForm';
+import { orderSummaryProps } from './orderSummaryProps';
 
 function OrderSummary({data,userInput}:orderSummaryProps) {
 
+  
   // const badgeTypeColor = getStatusColor(data.value.result!);
     // console.log(orderData);
     // console.log(data.value.result.clientSecret);
     // console.log(data.result.clientSecret);
+
+
+
     const name=data.value.result.rentItems[0].carList.name;
     const total=data.value.result.total;
   return (
@@ -30,7 +34,6 @@ function OrderSummary({data,userInput}:orderSummaryProps) {
             <div className="d-flex">
               <div className="d-flex w-100 justify-content-between">
                 <p>{name}</p>
-                {/* <p>Total</p> */}
               </div>
               <p style={{ width: "70px", textAlign: "right" }}>Total</p>
             </div>

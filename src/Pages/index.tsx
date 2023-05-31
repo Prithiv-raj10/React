@@ -9,4 +9,6 @@ import AuthenticationTest from "./AuthenticationTest";
 import AuthenticationTestAdmin from "./AuthenticationTestAdmin";
 import Payment from "./Payment";
 import OrderConfirmed from "./Order/OrderConfirmed";
-export {Register,Login,Home,NotFound,CarItemDetails,Booking,AccessDenied,AuthenticationTest,AuthenticationTestAdmin,Payment,OrderConfirmed};
+import CarItemList from "./CarItem/CarItemList";
+import CarItemUpsert from "./CarItem/CarItemUpsert";
+export {Register,Login,Home,NotFound,CarItemDetails,Booking,AccessDenied,AuthenticationTest,AuthenticationTestAdmin,Payment,CarItemUpsert,OrderConfirmed,CarItemList};

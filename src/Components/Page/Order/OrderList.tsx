@@ -2,6 +2,7 @@ import React from 'react'
 import OrderListProps from './orderListType'
 import { MainLoader } from '../Common'
 import { orderHeaderModel } from '../../../Interfaces'
+import getStatusColor from '../../../Helper/getHelperColor';
 
 function OrderList({isLoading,orderData}:OrderListProps) {
     console.log(orderData);
@@ -17,9 +18,11 @@ function OrderList({isLoading,orderData}:OrderListProps) {
         <div className="col-2">Phone</div>
         <div className="col-1">Total</div>
         <div className="col-2">Date</div>
-        <div className="col-2"></div>
+        <div className="col-2">Status</div>
+        <div className="col-1"></div>
       </div>
       {orderData.map((orderItem:orderHeaderModel)=>{
+        const badgeColor=getStatusColor(orderItem.status!)
         return(
           <div className="row border" key={orderItem.orderHeaderId}>
         <div className="col-1">{orderItem.orderHeaderId}</div>
@@ -27,7 +30,12 @@ function OrderList({isLoading,orderData}:OrderListProps) {
         <div className="col-2">{orderItem.pickupPhoneNumber}</div>
         <div className="col-1">₹ {orderItem.orderTotal!}</div>
         <div className="col-2">{new Date(orderItem.orderDate!).toLocaleDateString()}</div>
-        <div className="col-2">
+        <div className='col-2'>
+          <span className={`badge bg-${badgeColor}`}>
+            {orderItem.status}
+          </span>
+        </div>
+        <div className="col-1">
           <button className="btn btn-success">Details</button>
         </div>
         </div>

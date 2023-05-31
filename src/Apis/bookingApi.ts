@@ -4,6 +4,10 @@ const bookingApi = createApi({
   reducerPath: "bookingApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://localhost:7254/api/",
+    prepareHeaders: (headers: Headers, api) => {
+      const token = localStorage.getItem("token");
+      token && headers.append("Authorization", "Bearer " + token);
+    },
   }),
   tagTypes: ["BookingController"],
   endpoints: (builder) => ({
@@ -18,12 +22,12 @@ const bookingApi = createApi({
       providesTags:["BookingController"],
     }),
     updateBooking :builder.mutation({
-      query:({carListId,userId,removeCar})=>({
+      query:({userId,carListId,removeCar})=>({
         url:"BookingController",
         method:"POST",
         params:{
-          carListId,
           userId,
+          carListId,
           removeCar,
         },
       }),

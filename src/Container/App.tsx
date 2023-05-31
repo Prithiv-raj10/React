@@ -1,6 +1,6 @@
 import React from 'react';
 import { Footer, Header } from '../Components/Layout/Index';
-import { AccessDenied, AuthenticationTest, AuthenticationTestAdmin, Booking, CarItemDetails, Home, Login, NotFound,  OrderConfirmed,  Payment,  Register } from '../Pages';
+import { AccessDenied, AuthenticationTest, AuthenticationTestAdmin, Booking, CarItemDetails, CarItemList, CarItemUpsert, Home, Login, NotFound,  OrderConfirmed,  Payment,  Register } from '../Pages';
 import {Routes,Route} from "react-router-dom";
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,6 +11,7 @@ import { userModel } from '../Interfaces';
 import jwt_decode from "jwt-decode";
 import { RootState } from '../Storage/Redux/store';
 import MyOrders from '../Pages/Order/MyOrders';
+import AllOrders from '../Pages/Order/AllOrders';
 
 function App() {
   const dispatch= useDispatch();
@@ -54,6 +55,10 @@ function App() {
           <Route path="/payment" element={<Payment />}></Route>
           <Route path="order/orderconfirmed/:id" element={<OrderConfirmed />}></Route>
           <Route path="/order/myOrders" element={<MyOrders />}></Route>
+          <Route path="/order/allOrders" element={<AllOrders />}></Route>
+          <Route path="/carItem/caritemList" element={<CarItemList />}></Route>
+          <Route path="/carItem/caritemupsert/:id" element={<CarItemUpsert />}></Route>
+          <Route path="/carItem/caritemupsert" element={<CarItemUpsert />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>

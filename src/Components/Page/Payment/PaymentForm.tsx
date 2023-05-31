@@ -1,7 +1,7 @@
 import {useStripe, useElements, PaymentElement} from '@stripe/react-stripe-js';
 import {useState} from 'react';
 import { toastNotify } from '../../../Helper';
-import { orderSummaryProps } from '../Order/orderSummaryForm';
+import { orderSummaryProps } from '../Order/orderSummaryProps';
 import { apiResponse, rentItemModel } from '../../../Interfaces';
 import { useCreateOrderMutation } from '../../../Apis/orderApi';
 import { SD_Status } from '../../../Utility/SD';

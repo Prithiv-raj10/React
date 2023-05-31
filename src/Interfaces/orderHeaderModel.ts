@@ -1,3 +1,4 @@
+import { SD_Status } from "../Utility/SD"
 import orderDetail from "./orderDetailModel"
 
 export default interface orderDetailModel {
@@ -10,6 +11,6 @@ export default interface orderDetailModel {
     orderTotal?: number
     orderDate?: string
     stripePaymentIntentID?: string
-    status?: string
+    status?: SD_Status
     orderDetails?: orderDetail[]
   }
