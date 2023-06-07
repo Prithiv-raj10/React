@@ -15,7 +15,6 @@ function Banner() {
           </span>
         </div>
       </div>
-    // </div>
   )
 }
 

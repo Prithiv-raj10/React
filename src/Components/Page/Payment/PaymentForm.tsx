@@ -45,21 +45,6 @@ const PaymentForm = ({data,userInput}:orderSummaryProps) => {
         console.log(result.paymentIntent.status);
         console.log(data.value.result.rentItems);
     
-
-        // "pickupName": "string",
-        // "pickupPhoneNumber": "string",
-        // "pickupEmail": "string",
-        // "applicationUserId": "string",
-        // "orderTotal": 0,
-        // "stripePaymentIntentID": "string",
-        // "status": "string",
-        // "orderDetailsDTO": [
-        //   {
-        //     "carListId": 0,
-        //     "itemName": "string",
-        //     "price": 0
-        //   }
-        // ]
       const orderDetailsDTO: any = [];
       let total=0;
       data.value.result.rentItems.forEach((item: rentItemModel) => {

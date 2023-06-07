@@ -5,7 +5,6 @@ import { orderHeaderModel } from '../../../Interfaces'
 import getStatusColor from '../../../Helper/getHelperColor';
 
 function OrderList({isLoading,orderData}:OrderListProps) {
-    console.log(orderData);
   return (
     <>{isLoading && <MainLoader />}
     {!isLoading && (

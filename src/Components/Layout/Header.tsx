@@ -82,18 +82,18 @@ const handleLogout =() =>{
             
             <li className="nav-item">
 
-<button
-  className="btn btn-success btn-outlined rounded-pill text-white mx-2"
-  style={{
-    border: "none",
-    height: "40px",
-    width: "100px",
-  }}
-  onClick={handleLogout}
->
-  Logout
-</button>
-</li></>)}
+            <button
+              className="btn btn-success btn-outlined rounded-pill text-white mx-2"
+              style={{
+                border: "none",
+                height: "40px",
+                width: "100px",
+              }}
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+            </li></>)}
 
           {!userData.id && (<><li className="nav-item text-white">
                       <NavLink className="nav-link" to="/register">
@@ -110,8 +110,6 @@ const handleLogout =() =>{
                         Login
                         </NavLink>
                     </li></>)}
-       
-                    
           </div>
       </ul>
     </div>

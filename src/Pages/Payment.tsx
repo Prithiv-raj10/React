@@ -11,15 +11,14 @@ function Payment() {
       } = useLocation();
     
       const stripePromise = loadStripe('pk_test_51N6a5HSE1ciSL1Z1nWlJJKeXJ6soJATRHvUmH0rnL5L5RhKoc4G2z1NsFwoaZAb21JUBTq6SDTYElUmXBydPvY2200DWc3qS4W');
-      console.log(apiResult);
-      console.log(userInput);
+
       const options = {
         // passing the client secret obtained from the server
         clientSecret: apiResult.value.result.clientSecret,
       };
     
-      console.log(apiResult.value.result);
-      console.log(userInput);
+      // console.log(apiResult.value.result);
+      // console.log(userInput);
   return (
     <div>
          <Elements stripe={stripePromise} options={options}>

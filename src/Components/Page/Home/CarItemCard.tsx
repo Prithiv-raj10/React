@@ -37,9 +37,6 @@ function CarItemCard(props:Props) {
     
       });
 
-     
-    
-
       // union type compiler can't be sure
       if(response.data){
         const mes=response.data.message;

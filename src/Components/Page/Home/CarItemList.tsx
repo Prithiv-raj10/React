@@ -8,7 +8,6 @@ import { MainLoader } from '../Common';
 
 
 function CarItemList() {
-    // const [carLists,setCarLists]=useState<carListModel[]>([]);
     const dispatch = useDispatch();
     const {data,isLoading} = useGetCarItemsQuery(null);
     

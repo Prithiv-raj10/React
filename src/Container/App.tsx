@@ -33,8 +33,6 @@ function App() {
   {
     if(! isLoading)
     {
-      // console.log(data.result);
-      // console.log(data.result?.rentItems);
       dispatch(setBooking(data.result?.rentItems));
     }
 

@@ -37,7 +37,7 @@ function Login() {
     });
     if (response.data?.statusCode!==400) {
       console.log(response);
-      // i have added
+      
       if(response.data!==undefined){
       const  {token}  = response.data.result;
       const { fullName, id, email, role }: userModel = jwt_decode(token);
@@ -45,16 +45,13 @@ function Login() {
       dispatch(setLoggedInUser({ fullName, id, email, role }));
       navigate("/");
     }
-
-      // toastNotify("Registeration successful! Please login to continue.");
-      // navigate("/login");
     } else  {
       console.log(response);
 
-      // i have added
+     
       if(response.data.message!==undefined){
       setError(response.data.message);}
-      // toastNotify(response.error.data.errorMessages[0], "error");
+
     }
 
     setLoading(false);

@@ -82,15 +82,6 @@ function BookingSummary() {
                 height: "43px",
               }}
             >
-              {/* <span style={{ color: "rgba(22,22,22,.7)" }} role="button">
-                <i className="bi bi-dash-circle-fill"></i>
-              </span>
-              <span>
-                <b>10</b>
-              </span>
-              <span style={{ color: "rgba(22,22,22,.7)" }} role="button">
-                <i className="bi bi-plus-circle-fill"></i>
-              </span> */}
             </div>
   
             <button className="btn btn-danger mx-1" onClick={()=>handleRemove(1,rentItem)}>Remove</button>

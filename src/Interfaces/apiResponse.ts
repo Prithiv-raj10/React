@@ -1,6 +1,6 @@
 export default interface apiResponse {
     data?: {
-      // this will be included in suggestions so if possible use the format if you know that.
+      // this will be included in suggestions
       statusCode?: number;
       message?: string;
       result: {
